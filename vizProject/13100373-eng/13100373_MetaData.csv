@@ -1,0 +1,68 @@
+﻿"Cube Title","Product Id","CANSIM Id",URL,"Cube Notes","Archive Status",Frequency,"Start Reference Period","End Reference Period","Total number of dimensions"
+"Overweight and obesity based on measured body mass index, by age group and sex",13100373,,"https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310037301",1;2;3;4;5;6;8,"CURRENT - a cube available to the public and that is current",Occasional,2009-01-01,2019-01-01,5
+
+"Dimension ID","Dimension name","Dimension Notes","Dimension Definitions"
+1,Geography,,
+2,Measures,,
+3,Sex,,
+4,"Age group",,
+5,Characteristics,,
+
+"Dimension ID","Member Name","Classification Code","Member ID","Parent Member ID",Terminated,"Member Notes","Member Definitions"
+1,Canada,[11124],1,,,,
+2,Overweight,,1,,,,
+2,Obese,,2,,,,
+3,"Both sexes",,1,,,,
+3,Males,,2,1,,,
+3,Females,,3,1,,,
+4,"Ages 5 to 79",,1,,,7,
+4,"Ages 5 to 17",,2,,,7,
+4,"Ages 5 to 11",,3,2,,,
+4,"Ages 12 to 17",,4,2,,7,
+4,"Ages 18 to 79",,5,,,,
+4,"Ages 18 to 39",,6,5,,,
+4,"Ages 40 to 59",,7,5,,,
+4,"Ages 60 to 79",,8,5,,,
+5,Percent,,1,,,,
+5,"Low 95% confidence interval, percent",,2,,,,
+5,"High 95% confidence interval, percent",,3,,,,
+5,"Number of persons",,4,,,,
+5,"Low 95% confidence interval, number of persons",,5,,,,
+5,"High 95% confidence interval, number of persons",,6,,,,
+
+Symbol Legend
+Description,Symbol
+"not available for a specific reference period",..
+"less than the limit of detection",<LOD
+"value rounded to 0 (zero) where there is a meaningful distinction between true zero and the value that was rounded",0s
+"data quality: excellent",A
+"data quality: very good",B
+"data quality: good",C
+"data quality: acceptable",D
+"use with caution",E
+"too unreliable to be published",F
+"not applicable",...
+preliminary,p
+revised,r
+"suppressed to meet the confidentiality requirements of the Statistics Act",x
+terminated,t
+
+"Survey Code","Survey Name"
+5071,"Canadian Health Measures Survey"
+
+"Subject Code","Subject Name"
+13,Health
+
+"Note ID",Note
+1,"Source: Canadian Health Measures Survey (CHMS)."
+2,"Data from the Canadian Health Measures Survey are collected over a two-year period from a sample of approximately 5,700 respondents. Cycle 1 data collected from March 2007 to February 2009. Cycle 2 data collected from August 2009 to December 2011. Data collected from January to December of the following year for subsequent cycles."
+3,"Excluding pregnant women."
+4,"Body mass index (BMI) is calculated by dividing the respondent's body weight (in kilograms) by their height (in metres) squared."
+5,"According to the World Health Organization (WHO) and Health Canada guidelines, the index for body weight classification for the population aged 18 and older is: less than 18.50 (underweight); 18.50 to 24.99 (normal weight); 25.00 to 29.99 (overweight); 30.00 to 34.99 (obese, class I); 35.00 to 39.99 (obese, class II); 40.00 or greater (obese, class III). The population aged 5 to 17 is classified as ""overweight"" or ""obese"" according to age and sex specific cut-off points defined by the World Health Organization."
+6,"The Canadian Community Health Survey (CCHS) - Annual, the Canadian Health Measures Survey (CHMS) and the 2015 CCHS - Nutrition, all collect height and weight data and derive obesity estimates based on Body Mass Index (BMI). Users should take note of the data collection method, the target population and the classification system used by each survey in order to select the appropriate data set."
+7,"For the reference period 2007 to 2009, 5 year olds were not part of the target sample, so the estimates presented represent those aged 6 and over only."
+8,"This table replaces tables 13-10-0320-01, 13-10-0321-01, 13-10-0322-01 and 13-10-0323-01."
+
+"Correction ID","Correction Date","Correction Note"
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<html>
+
+<head>
+  <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+  <!-- <link rel='stylesheet' href='style.css'> -->
+  <style type="text/css">
+    table {
+      border-collapse: collapse;
+      border: 2px black solid;
+      font: 12px sans-serif;
+    }
+
+    td {
+      border: 1px black solid;
+      padding: 5px;
+    }
+
+    #buttons {
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 2px;
+    }
+
+    .tableButton {
+      background: teal;
+      padding: 10px 5px;
+      margin: 1% 5%;
+      width: 20%;
+
+    }
+
+    .tableButton:hover {
+      background: purple;
+
+    }
+  </style>
+  <link rel="stylesheet"  href="css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Changa+One|Open+Sans:300italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet"  href="css/main.css">
+  <link rel="stylesheet"  href="css/responsive.css">
+  <meta name="viewport" content="width= device-width, intial-scale=1.0">
+</head>
+
+<body>
+  <header style="margin-bottom: 2%;">
+
+    <a href="index.html" id="logo">
+      <h1>Obesity Levels in Canada</h1>
+      <h2> Data Visualization</h2>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tables.html" class="selected">Table</a></li>
+        <li><a href="graph.html">Graph</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="conclusion.html">Conclusion</a></li>
+      </ul>
+    </nav>
+  </header>
+  </head>
+
+  <body>
+    <div id="buttons">
+      <button class="tableButton" id="button" onClick="updateTable('ca.csv')">Ca</button>
+      <button class="tableButton" id="button2" onClick="updateTable('cansim2.csv')">cansim</button>
+      <button class="tableButton" id="button3" onClick="updateTable('canadaLevels.csv')">canadaLevels</button>
+    </div>
+    <script type='text/javascript' src='new.js'></script>
+    <div id="OutDiv">
+      <div id="table" style="width: 80%; margin-left:10%;"> </div>
+      <div>
+        <br/>
+          <p style="margin: 1px;"> User Guide:</p>
+            <p style="margin: 1px;">- Each table, reperesents a csv/josn file used in further visualizations</p>
+            <p style="margin: 1px;">- Press on buttons in order to switch to a different table</p>
+      </div>
+    </div>
+  </body>
+
+</html>

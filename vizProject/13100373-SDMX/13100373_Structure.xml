@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>h1</mes:ID>
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2020-10-14T04:04:51.782Z</mes:Prepared>
+    <mes:Sender id="StatCan"/>
+    <mes:Receiver id="Public"/>
+  </mes:Header>
+  <mes:Structures>
+    <str:OrganisationSchemes>
+      <str:AgencyScheme id="AGENCIES" urn="urn:sdmx:org.sdmx.infomodel.base.AgencyScheme=SDMX:AGENCIES(1.0)" agencyID="SDMX" version="1.0">
+        <com:Name xml:lang="en">SDMX Agency Scheme</com:Name>
+        <str:Agency id="SDMX" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=SDMX">
+          <com:Name xml:lang="en">SDMX</com:Name>
+        </str:Agency>
+        <str:Agency id="StatCan" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=StatCan">
+          <com:Name xml:lang="en">Statistics Canada</com:Name>
+          <com:Name xml:lang="fr">Statistique Canada</com:Name>
+        </str:Agency>
+      </str:AgencyScheme>
+    </str:OrganisationSchemes>
+    <str:Dataflows>
+      <str:Dataflow id="DF_13100373" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=StatCan:DF_13100373(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">Overweight and obesity based on measured body mass index, by age group and sex</com:Name>
+        <com:Name xml:lang="fr">Embonpoint et obésité selon l'indice de masse corporelle mesuré, selon le groupe d'âge et le sexe</com:Name>
+        <str:Structure>
+          <Ref id="Data_Structure_13100373" version="1.0" agencyID="StatCan" package="datastructure" class="DataStructure"/>
+        </str:Structure>
+      </str:Dataflow>
+    </str:Dataflows>
+    <str:Codelists>
+      <str:Codelist id="CL_Age_group" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=StatCan:CL_Age_group(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">Age group</com:Name>
+        <com:Name xml:lang="fr">Groupe d'âge</com:Name>
+        <str:Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Age_group(1.0).1">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationTitle>Footnote_7</com:AnnotationTitle>
+              <com:AnnotationType>FootnoteId</com:AnnotationType>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Ages 5 to 79</com:Name>
+          <com:Name xml:lang="fr">5 à 79 ans</com:Name>
+        </str:Code>
+        <str:Code id="2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Age_group(1.0).2">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationTitle>Footnote_7</com:AnnotationTitle>
+              <com:AnnotationType>FootnoteId</com:AnnotationType>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Ages 5 to 17</com:Name>
+          <com:Name xml:lang="fr">5 à 17 ans</com:Name>
+        </str:Code>
+        <str:Code id="3" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Age_group(1.0).3">
+          <com:Name xml:lang="en">Ages 5 to 11</com:Name>
+          <com:Name xml:lang="fr">5 à 11 ans</com:Name>
+          <str:Parent>
+            <Ref id="2"/>
+          </str:Parent>
+        </str:Code>
+        <str:Code id="4" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Age_group(1.0).4">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationTitle>Footnote_7</com:AnnotationTitle>
+              <com:AnnotationType>FootnoteId</com:AnnotationType>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Ages 12 to 17</com:Name>
+          <com:Name xml:lang="fr">12 à 17 ans</com:Name>
+          <str:Parent>
+            <Ref id="2"/>
+          </str:Parent>
+        </str:Code>
+        <str:Code id="5" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Age_group(1.0).5">
+          <com:Name xml:lang="en">Ages 18 to 79</com:Name>
+          <com:Name xml:lang="fr">18 à 79 ans</com:Name>
+        </str:Code>
+        <str:Code id="6" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Age_group(1.0).6">
+          <com:Name xml:lang="en">Ages 18 to 39</com:Name>
+          <com:Name xml:lang="fr">18 à 39 ans</com:Name>
+          <str:Parent>
+            <Ref id="5"/>
+          </str:Parent>
+        </str:Code>
+        <str:Code id="7" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Age_group(1.0).7">
+          <com:Name xml:lang="en">Ages 40 to 59</com:Name>
+          <com:Name xml:lang="fr">40 à 59 ans</com:Name>
+          <str:Parent>
+            <Ref id="5"/>
+          </str:Parent>
+        </str:Code>
+        <str:Code id="8" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Age_group(1.0).8">
+          <com:Name xml:lang="en">Ages 60 to 79</com:Name>
+          <com:Name xml:lang="fr">60 à 79 ans</com:Name>
+          <str:Parent>
+            <Ref id="5"/>
+          </str:Parent>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_Characteristics" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=StatCan:CL_Characteristics(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">Characteristics</com:Name>
+        <com:Name xml:lang="fr">Caractéristiques</com:Name>
+        <str:Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Characteristics(1.0).1">
+          <com:Name xml:lang="en">Percent</com:Name>
+          <com:Name xml:lang="fr">Pourcentage</com:Name>
+        </str:Code>
+        <str:Code id="2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Characteristics(1.0).2">
+          <com:Name xml:lang="en">Low 95% confidence interval, percent</com:Name>
+          <com:Name xml:lang="fr">Limite inférieure de l'intervalle de confiance de 95 %, pourcentage</com:Name>
+        </str:Code>
+        <str:Code id="3" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Characteristics(1.0).3">
+          <com:Name xml:lang="en">High 95% confidence interval, percent</com:Name>
+          <com:Name xml:lang="fr">Limite supérieure de l'intervalle de confiance de 95 %, pourcentage</com:Name>
+        </str:Code>
+        <str:Code id="4" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Characteristics(1.0).4">
+          <com:Name xml:lang="en">Number of persons</com:Name>
+          <com:Name xml:lang="fr">Nombre de personnes</com:Name>
+        </str:Code>
+        <str:Code id="5" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Characteristics(1.0).5">
+          <com:Name xml:lang="en">Low 95% confidence interval, number of persons</com:Name>
+          <com:Name xml:lang="fr">Limite inférieure de l'intervalle de confiance de 95 %, nombre de personnes</com:Name>
+        </str:Code>
+        <str:Code id="6" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Characteristics(1.0).6">
+          <com:Name xml:lang="en">High 95% confidence interval, number of persons</com:Name>
+          <com:Name xml:lang="fr">Limite supérieure de l'intervalle de confiance de 95 %, nombre de personnes</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_DGUID" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=StatCan:CL_DGUID(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">DGUID</com:Name>
+        <com:Name xml:lang="fr">DGUID</com:Name>
+        <str:Code id="2016A000011124" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_DGUID(1.0).2016A000011124">
+          <com:Name xml:lang="en">2016A000011124</com:Name>
+          <com:Name xml:lang="fr">2016A000011124</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_Geography" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=StatCan:CL_Geography(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">Geography</com:Name>
+        <com:Name xml:lang="fr">Géographie</com:Name>
+        <str:Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Geography(1.0).1">
+          <com:Name xml:lang="en">Canada</com:Name>
+          <com:Name xml:lang="fr">Canada</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_Measures" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=StatCan:CL_Measures(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">Measures</com:Name>
+        <com:Name xml:lang="fr">Measures</com:Name>
+        <str:Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Measures(1.0).1">
+          <com:Name xml:lang="en">Overweight</com:Name>
+          <com:Name xml:lang="fr">Embonpoint</com:Name>
+        </str:Code>
+        <str:Code id="2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Measures(1.0).2">
+          <com:Name xml:lang="en">Obese</com:Name>
+          <com:Name xml:lang="fr">Obèse</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_SCALAR_FACTOR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=StatCan:CL_SCALAR_FACTOR(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">Scalar Factor</com:Name>
+        <com:Name xml:lang="fr">Facteur scalaire</com:Name>
+        <str:Code id="0" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SCALAR_FACTOR(1.0).0">
+          <com:Name xml:lang="en">units</com:Name>
+          <com:Name xml:lang="fr">unités</com:Name>
+        </str:Code>
+        <str:Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SCALAR_FACTOR(1.0).1">
+          <com:Name xml:lang="en">tens</com:Name>
+          <com:Name xml:lang="fr">dizaines</com:Name>
+        </str:Code>
+        <str:Code id="2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SCALAR_FACTOR(1.0).2">
+          <com:Name xml:lang="en">hundreds</com:Name>
+          <com:Name xml:lang="fr">centaines</com:Name>
+        </str:Code>
+        <str:Code id="3" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SCALAR_FACTOR(1.0).3">
+          <com:Name xml:lang="en">thousands</com:Name>
+          <com:Name xml:lang="fr">milliers</com:Name>
+        </str:Code>
+        <str:Code id="4" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SCALAR_FACTOR(1.0).4">
+          <com:Name xml:lang="en">tens of thousands</com:Name>
+          <com:Name xml:lang="fr">dizaines de milliers</com:Name>
+        </str:Code>
+        <str:Code id="5" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SCALAR_FACTOR(1.0).5">
+          <com:Name xml:lang="en">hundreds of thousands</com:Name>
+          <com:Name xml:lang="fr">centaines de milliers</com:Name>
+        </str:Code>
+        <str:Code id="6" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SCALAR_FACTOR(1.0).6">
+          <com:Name xml:lang="en">millions</com:Name>
+          <com:Name xml:lang="fr">millions</com:Name>
+        </str:Code>
+        <str:Code id="7" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SCALAR_FACTOR(1.0).7">
+          <com:Name xml:lang="en">tens of millions</com:Name>
+          <com:Name xml:lang="fr">dizaines de millions</com:Name>
+        </str:Code>
+        <str:Code id="8" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SCALAR_FACTOR(1.0).8">
+          <com:Name xml:lang="en">hundreds of millions</com:Name>
+          <com:Name xml:lang="fr">centaines de millions</com:Name>
+        </str:Code>
+        <str:Code id="9" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SCALAR_FACTOR(1.0).9">
+          <com:Name xml:lang="en">billions</com:Name>
+          <com:Name xml:lang="fr">milliards</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_SECURITY_LEVEL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=StatCan:CL_SECURITY_LEVEL(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">Security Level</com:Name>
+        <com:Name xml:lang="fr">Niveau de sécurité</com:Name>
+        <str:Code id="0" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SECURITY_LEVEL(1.0).0">
+          <com:Name xml:lang="en">0 = public</com:Name>
+          <com:Name xml:lang="fr">0 = public</com:Name>
+        </str:Code>
+        <str:Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SECURITY_LEVEL(1.0).1">
+          <com:Name xml:lang="en">x = suppressed to meet the confidentiality requirements of the Statistics Act</com:Name>
+          <com:Name xml:lang="fr">x = confidentiel en vertu des dispositions de la Loi sur la statistique</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_STATUS_CAN" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=StatCan:CL_STATUS_CAN(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">Status</com:Name>
+        <com:Name xml:lang="fr">Statut</com:Name>
+        <str:Code id="0" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_STATUS_CAN(1.0).0">
+          <com:Name xml:lang="en">0 = normal</com:Name>
+          <com:Name xml:lang="fr">0 = normal</com:Name>
+        </str:Code>
+        <str:Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_STATUS_CAN(1.0).1">
+          <com:Name xml:lang="en">.. = not available for a specific reference period</com:Name>
+          <com:Name xml:lang="fr">.. = indisponible pour une période de référence précise</com:Name>
+        </str:Code>
+        <str:Code id="2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_STATUS_CAN(1.0).2">
+          <com:Name xml:lang="en">0s = value rounded to 0 (zero) where there is a meaningful distinction between true zero and the value that was rounded</com:Name>
+          <com:Name xml:lang="fr">0s = valeur arrondie à 0 (zéro) là où il y a une distinction importante entre le zéro absolu et la valeur arrondie</com:Name>
+        </str:Code>
+        <str:Code id="3" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_STATUS_CAN(1.0).3">
+          <com:Name xml:lang="en">A = data quality: excellent</com:Name>
+          <com:Name xml:lang="fr">A = qualité des données : excellente</com:Name>
+        </str:Code>
+        <str:Code id="4" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_STATUS_CAN(1.0).4">
+          <com:Name xml:lang="en">B = data quality: very good</com:Name>
+          <com:Name xml:lang="fr">B = qualité des données : très bonne</com:Name>
+        </str:Code>
+        <str:Code id="5" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_STATUS_CAN(1.0).5">
+          <com:Name xml:lang="en">C = data quality: good</com:Name>
+          <com:Name xml:lang="fr">C = qualité des données : bonne</com:Name>
+        </str:Code>
+        <str:Code id="6" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_STATUS_CAN(1.0).6">
+          <com:Name xml:lang="en">D = data quality: acceptable</com:Name>
+          <com:Name xml:lang="fr">D = qualité des données : acceptable</com:Name>
+        </str:Code>
+        <str:Code id="7" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_STATUS_CAN(1.0).7">
+          <com:Name xml:lang="en">E = use with caution</com:Name>
+          <com:Name xml:lang="fr">E = à utiliser avec prudence</com:Name>
+        </str:Code>
+        <str:Code id="8" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_STATUS_CAN(1.0).8">
+          <com:Name xml:lang="en">F = too unreliable to be published</com:Name>
+          <com:Name xml:lang="fr">F = trop peu fiable pour être publié</com:Name>
+        </str:Code>
+        <str:Code id="9" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_STATUS_CAN(1.0).9">
+          <com:Name xml:lang="en">... = not applicable</com:Name>
+          <com:Name xml:lang="fr">... = n'ayant pas lieu de figurer</com:Name>
+        </str:Code>
+        <str:Code id="10" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_STATUS_CAN(1.0).10">
+          <com:Name xml:lang="en">&lt;LOD = less than the limit of detection</com:Name>
+          <com:Name xml:lang="fr">&lt;LOD = inférieur à la limite de détection</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_SYMBOL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=StatCan:CL_SYMBOL(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">Symbol</com:Name>
+        <com:Name xml:lang="fr">Symbole</com:Name>
+        <str:Code id="0" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SYMBOL(1.0).0">
+          <com:Name xml:lang="en">0 = none</com:Name>
+          <com:Name xml:lang="fr">0 = aucun</com:Name>
+        </str:Code>
+        <str:Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SYMBOL(1.0).1">
+          <com:Name xml:lang="en">p = preliminary</com:Name>
+          <com:Name xml:lang="fr">p = provisoire</com:Name>
+        </str:Code>
+        <str:Code id="3" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_SYMBOL(1.0).3">
+          <com:Name xml:lang="en">r = revised</com:Name>
+          <com:Name xml:lang="fr">r = révisé</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_Sex" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=StatCan:CL_Sex(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">Sex</com:Name>
+        <com:Name xml:lang="fr">Sexe</com:Name>
+        <str:Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Sex(1.0).1">
+          <com:Name xml:lang="en">Both sexes</com:Name>
+          <com:Name xml:lang="fr">Les deux sexes</com:Name>
+        </str:Code>
+        <str:Code id="2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Sex(1.0).2">
+          <com:Name xml:lang="en">Males</com:Name>
+          <com:Name xml:lang="fr">Hommes</com:Name>
+          <str:Parent>
+            <Ref id="1"/>
+          </str:Parent>
+        </str:Code>
+        <str:Code id="3" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_Sex(1.0).3">
+          <com:Name xml:lang="en">Females</com:Name>
+          <com:Name xml:lang="fr">Femmes</com:Name>
+          <str:Parent>
+            <Ref id="1"/>
+          </str:Parent>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_TERMINATED" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=StatCan:CL_TERMINATED(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">Terminated</com:Name>
+        <com:Name xml:lang="fr">Terminé</com:Name>
+        <str:Code id="0" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_TERMINATED(1.0).0">
+          <com:Name xml:lang="en">0 = active</com:Name>
+          <com:Name xml:lang="fr">0 = actif</com:Name>
+        </str:Code>
+        <str:Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_TERMINATED(1.0).1">
+          <com:Name xml:lang="en">t = terminated</com:Name>
+          <com:Name xml:lang="fr">t = terminé</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_UOM" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=StatCan:CL_UOM(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">Unit of measure</com:Name>
+        <com:Name xml:lang="fr">Unité de mesure</com:Name>
+        <str:Code id="242" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_UOM(1.0).242">
+          <com:Name xml:lang="en">Percentage</com:Name>
+          <com:Name xml:lang="fr">Pourcentage</com:Name>
+        </str:Code>
+        <str:Code id="223" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=StatCan:CL_UOM(1.0).223">
+          <com:Name xml:lang="en">Number</com:Name>
+          <com:Name xml:lang="fr">Nombre</com:Name>
+        </str:Code>
+      </str:Codelist>
+    </str:Codelists>
+    <str:Concepts>
+      <str:ConceptScheme id="CONCEPTS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=StatCan:CONCEPTS(1.0)" agencyID="StatCan" version="1.0">
+        <com:Name xml:lang="en">Concepts of Overweight and obesity based on measured body mass index, by age group and sex</com:Name>
+        <com:Name xml:lang="fr">Concepts de Embonpoint et obésité selon l'indice de masse corporelle mesuré, selon le groupe d'âge et le sexe</com:Name>
+        <str:Concept id="Geography" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).Geography">
+          <com:Name xml:lang="en">Geography</com:Name>
+          <com:Name xml:lang="fr">Géographie</com:Name>
+        </str:Concept>
+        <str:Concept id="Measures" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).Measures">
+          <com:Name xml:lang="en">Measures</com:Name>
+          <com:Name xml:lang="fr">Measures</com:Name>
+        </str:Concept>
+        <str:Concept id="Sex" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).Sex">
+          <com:Name xml:lang="en">Sex</com:Name>
+          <com:Name xml:lang="fr">Sexe</com:Name>
+        </str:Concept>
+        <str:Concept id="Age_group" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).Age_group">
+          <com:Name xml:lang="en">Age group</com:Name>
+          <com:Name xml:lang="fr">Groupe d'âge</com:Name>
+        </str:Concept>
+        <str:Concept id="Characteristics" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).Characteristics">
+          <com:Name xml:lang="en">Characteristics</com:Name>
+          <com:Name xml:lang="fr">Caractéristiques</com:Name>
+        </str:Concept>
+        <str:Concept id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).TIME_PERIOD">
+          <com:Name xml:lang="en">Time</com:Name>
+          <com:Name xml:lang="fr">Temps</com:Name>
+        </str:Concept>
+        <str:Concept id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).OBS_VALUE">
+          <com:Name xml:lang="en">Observation Value</com:Name>
+          <com:Name xml:lang="fr">Valeur de l'observation</com:Name>
+        </str:Concept>
+        <str:Concept id="UOM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).UOM">
+          <com:Name xml:lang="en">Unit of measure</com:Name>
+          <com:Name xml:lang="fr">Unité de mesure</com:Name>
+        </str:Concept>
+        <str:Concept id="DGUID" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).DGUID">
+          <com:Name xml:lang="en">DGUID</com:Name>
+          <com:Name xml:lang="fr">DGUID</com:Name>
+        </str:Concept>
+        <str:Concept id="SCALAR_FACTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).SCALAR_FACTOR">
+          <com:Name xml:lang="en">Scalar Factor</com:Name>
+          <com:Name xml:lang="fr">Facteur scalaire</com:Name>
+        </str:Concept>
+        <str:Concept id="NB_DECIMAL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).NB_DECIMAL">
+          <com:Name xml:lang="en">Number of decimal</com:Name>
+          <com:Name xml:lang="fr">Nombre de décimals</com:Name>
+        </str:Concept>
+        <str:Concept id="VECTOR_ID" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).VECTOR_ID">
+          <com:Name xml:lang="en">Vector ID</com:Name>
+          <com:Name xml:lang="fr">Identifiant de vecteur</com:Name>
+        </str:Concept>
+        <str:Concept id="SYMBOL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).SYMBOL">
+          <com:Name xml:lang="en">Symbol</com:Name>
+          <com:Name xml:lang="fr">Symbole</com:Name>
+        </str:Concept>
+        <str:Concept id="STATUS_CAN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).STATUS_CAN">
+          <com:Name xml:lang="en">Status</com:Name>
+          <com:Name xml:lang="fr">Statut</com:Name>
+        </str:Concept>
+        <str:Concept id="TERMINATED" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).TERMINATED">
+          <com:Name xml:lang="en">Terminated</com:Name>
+          <com:Name xml:lang="fr">Terminé</com:Name>
+        </str:Concept>
+        <str:Concept id="SECURITY_LEVEL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=StatCan:CONCEPTS(1.0).SECURITY_LEVEL">
+          <com:Name xml:lang="en">Security Level</com:Name>
+          <com:Name xml:lang="fr">Niveau de sécurité</com:Name>
+        </str:Concept>
+      </str:ConceptScheme>
+    </str:Concepts>
+    <str:DataStructures>
+      <str:DataStructure id="Data_Structure_13100373" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=StatCan:Data_Structure_13100373(1.0)" agencyID="StatCan" version="1.0">
+        <com:Annotations>
+          <com:Annotation id="Footnote_1">
+            <com:AnnotationType>Footnote</com:AnnotationType>
+            <com:AnnotationText xml:lang="en">Source: Canadian Health Measures Survey (CHMS).</com:AnnotationText>
+            <com:AnnotationText xml:lang="fr">Source : Enquête canadienne sur les mesures de la santé (ECMS).</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation id="Footnote_2">
+            <com:AnnotationType>Footnote</com:AnnotationType>
+            <com:AnnotationText xml:lang="en">Data from the Canadian Health Measures Survey are collected over a two-year period from a sample of approximately 5,700 respondents. Cycle 1 data collected from March 2007 to February 2009. Cycle 2 data collected from August 2009 to December 2011. Data collected from January to December of the following year for subsequent cycles.</com:AnnotationText>
+            <com:AnnotationText xml:lang="fr">Les données de l'Enquête canadienne sur les mesures de la santé sont recueillies sont sur une période de 2 ans auprès d'un échantillon d'environ 5 700 répondants. Les données du cycle 1 ont été recueillies de mars 2007 à février 2011. Les données du cycle 2 ont été recueillies d'août 2009 à novembre 2011. Les données ont été recueillies de janvier à décembre pour les cycles ultérieurs.</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation id="Footnote_3">
+            <com:AnnotationType>Footnote</com:AnnotationType>
+            <com:AnnotationText xml:lang="en">Excluding pregnant women.</com:AnnotationText>
+            <com:AnnotationText xml:lang="fr">Excluant les femmes enceintes</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation id="Footnote_4">
+            <com:AnnotationType>Footnote</com:AnnotationType>
+            <com:AnnotationText xml:lang="en">Body mass index (BMI) is calculated by dividing the respondent's body weight (in kilograms) by their height (in metres) squared.</com:AnnotationText>
+            <com:AnnotationText xml:lang="fr">L'indice de masse corporelle (IMC) est calculée en divisant le poids du répondant (exprimé en kilogramme) par le carré de la taille (exprimée en mètres)</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation id="Footnote_5">
+            <com:AnnotationType>Footnote</com:AnnotationType>
+            <com:AnnotationText xml:lang="en">According to the World Health Organization (WHO) and Health Canada guidelines, the index for body weight classification for the population aged 18 and older is: less than 18.50 (underweight); 18.50 to 24.99 (normal weight); 25.00 to 29.99 (overweight); 30.00 to 34.99 (obese, class I); 35.00 to 39.99 (obese, class II); 40.00 or greater (obese, class III). The population aged 5 to 17 is classified as "overweight" or "obese" according to age and sex specific cut-off points defined by the World Health Organization.</com:AnnotationText>
+            <com:AnnotationText xml:lang="fr">Les catégories d'indice de masse corporelle de la population de 18 ans et plus, fondées sur les lignes directrices de l'Organisation mondiale de la santé (OMS) et de Santé Canada, sont les suivantes : moins de 18,50 (poids insuffisant); 18,50 à 24,99 (poids normal); 25,00 à 29,99 (embonpoint); 30,00 à 34,99 (obésité, classe I); 35,00 à 39,99 (obésité, classe II); 40,00 ou plus (obésité, classe III). Les jeunes de 12 à 17 ans sont classés comme étant « gravement obèse », « obèse » ou en « excès de poids » d'après les seuils selon l'âge et le sexe définis par l'OMS.</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation id="Footnote_6">
+            <com:AnnotationType>Footnote</com:AnnotationType>
+            <com:AnnotationText xml:lang="en">The Canadian Community Health Survey (CCHS) - Annual, the Canadian Health Measures Survey (CHMS) and the 2015 CCHS - Nutrition, all collect height and weight data and derive obesity estimates based on Body Mass Index (BMI). Users should take note of the data collection method, the target population and the classification system used by each survey in order to select the appropriate data set.</com:AnnotationText>
+            <com:AnnotationText xml:lang="fr">L'Enquête sur la santé dans les collectivités canadiennes (ESCC) - composante annuelle, l'Enquête canadienne sur les mesures de la santé (ECMS) ainsi que l'ESCC 2015 - composante nutrition, recueillent toutes des données sur la taille et le poids et dérivent des taux d'obésité basés sur l'indice de masse corporelle (IMC). Les utilisateurs devraient prendre en considération la méthode de collecte de données et la population cible pour chaque enquête afin de choisir l'ensemble de données approprié.</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation id="Footnote_7">
+            <com:AnnotationType>Footnote</com:AnnotationType>
+            <com:AnnotationText xml:lang="en">For the reference period 2007 to 2009, 5 year olds were not part of the target sample, so the estimates presented represent those aged 6 and over only.</com:AnnotationText>
+            <com:AnnotationText xml:lang="fr">Pour la période de référence de 2007 à 2009, les enfants âgés de 5 ans sont exclus de l'échantillon cible, ainsi les estimations représentent ceux âgés de 6 ans et plus pour cette période.</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation id="Footnote_8">
+            <com:AnnotationType>Footnote</com:AnnotationType>
+            <com:AnnotationText xml:lang="en">This table replaces tables 13-10-0320-01, 13-10-0321-01, 13-10-0322-01 and 13-10-0323-01.</com:AnnotationText>
+            <com:AnnotationText xml:lang="fr">Ce tableau remplace les tableaux 13-10-0320-01, 13-10-0321-01, 13-10-0322-01 et 13-10-0323-01.</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation id="freq">
+            <com:AnnotationTitle>Frequency / Fréquence</com:AnnotationTitle>
+            <com:AnnotationType>freq</com:AnnotationType>
+            <com:AnnotationText xml:lang="en">Occasional</com:AnnotationText>
+            <com:AnnotationText xml:lang="fr">Occasionnelle</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation id="Subject_13">
+            <com:AnnotationTitle>Subject / Suject</com:AnnotationTitle>
+            <com:AnnotationType>subject</com:AnnotationType>
+            <com:AnnotationText xml:lang="en">Health</com:AnnotationText>
+            <com:AnnotationText xml:lang="fr">Santé</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation id="archiveStatus">
+            <com:AnnotationTitle>Archive / Archivé</com:AnnotationTitle>
+            <com:AnnotationType>archiveStatus</com:AnnotationType>
+            <com:AnnotationText xml:lang="en">CURRENT - a cube available to the public and that is current</com:AnnotationText>
+            <com:AnnotationText xml:lang="fr">ACTIF - un cube qui est disponible au public et qui est toujours mise a jour</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation id="URL">
+            <com:AnnotationTitle>URL</com:AnnotationTitle>
+            <com:AnnotationType>URL</com:AnnotationType>
+            <com:AnnotationText xml:lang="en">https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310037301</com:AnnotationText>
+            <com:AnnotationText xml:lang="fr">https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=1310037301</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation id="universe">
+            <com:AnnotationTitle>Universe / Univers</com:AnnotationTitle>
+            <com:AnnotationType>universe</com:AnnotationType>
+          </com:Annotation>
+          <com:Annotation id="variableList">
+            <com:AnnotationTitle>Variable List / Liste de variables</com:AnnotationTitle>
+            <com:AnnotationType>variableList</com:AnnotationType>
+          </com:Annotation>
+        </com:Annotations>
+        <com:Name xml:lang="en">Data Structure of Overweight and obesity based on measured body mass index, by age group and sex</com:Name>
+        <com:Name xml:lang="fr">Structure de données de Embonpoint et obésité selon l'indice de masse corporelle mesuré, selon le groupe d'âge et le sexe</com:Name>
+        <str:DataStructureComponents>
+          <str:DimensionList id="DimensionDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DimensionDescriptor=StatCan:Data_Structure_13100373(1.0).DimensionDescriptor">
+            <str:Dimension id="Geography" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=StatCan:Data_Structure_13100373(1.0).Geography" position="1">
+              <str:ConceptIdentity>
+                <Ref id="Geography" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_Geography" version="1.0" agencyID="StatCan" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="Measures" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=StatCan:Data_Structure_13100373(1.0).Measures" position="2">
+              <str:ConceptIdentity>
+                <Ref id="Measures" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_Measures" version="1.0" agencyID="StatCan" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="Sex" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=StatCan:Data_Structure_13100373(1.0).Sex" position="3">
+              <str:ConceptIdentity>
+                <Ref id="Sex" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_Sex" version="1.0" agencyID="StatCan" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="Age_group" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=StatCan:Data_Structure_13100373(1.0).Age_group" position="4">
+              <str:ConceptIdentity>
+                <Ref id="Age_group" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_Age_group" version="1.0" agencyID="StatCan" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="Characteristics" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=StatCan:Data_Structure_13100373(1.0).Characteristics" position="5">
+              <str:ConceptIdentity>
+                <Ref id="Characteristics" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_Characteristics" version="1.0" agencyID="StatCan" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:TimeDimension id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.datastructure.TimeDimension=StatCan:Data_Structure_13100373(1.0).TIME_PERIOD" position="6">
+              <str:ConceptIdentity>
+                <Ref id="TIME_PERIOD" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:TextFormat/>
+              </str:LocalRepresentation>
+            </str:TimeDimension>
+          </str:DimensionList>
+          <str:AttributeList id="AttributeDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.AttributeDescriptor=StatCan:Data_Structure_13100373(1.0).AttributeDescriptor">
+            <str:Attribute id="UOM" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=StatCan:Data_Structure_13100373(1.0).UOM" assignmentStatus="Mandatory">
+              <str:ConceptIdentity>
+                <Ref id="UOM" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_UOM" version="1.0" agencyID="StatCan" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="Characteristics"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="DGUID" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=StatCan:Data_Structure_13100373(1.0).DGUID" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="DGUID" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_DGUID" version="1.0" agencyID="StatCan" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="Geography"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="SCALAR_FACTOR" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=StatCan:Data_Structure_13100373(1.0).SCALAR_FACTOR" assignmentStatus="Mandatory">
+              <str:ConceptIdentity>
+                <Ref id="SCALAR_FACTOR" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_SCALAR_FACTOR" version="1.0" agencyID="StatCan" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:PrimaryMeasure>
+                  <Ref id="OBS_VALUE"/>
+                </str:PrimaryMeasure>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="VECTOR_ID" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=StatCan:Data_Structure_13100373(1.0).VECTOR_ID" assignmentStatus="Mandatory">
+              <str:ConceptIdentity>
+                <Ref id="VECTOR_ID" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:TextFormat/>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:PrimaryMeasure>
+                  <Ref id="OBS_VALUE"/>
+                </str:PrimaryMeasure>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="NB_DECIMAL" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=StatCan:Data_Structure_13100373(1.0).NB_DECIMAL" assignmentStatus="Mandatory">
+              <str:ConceptIdentity>
+                <Ref id="NB_DECIMAL" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:TextFormat/>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:PrimaryMeasure>
+                  <Ref id="OBS_VALUE"/>
+                </str:PrimaryMeasure>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="SYMBOL" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=StatCan:Data_Structure_13100373(1.0).SYMBOL" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="SYMBOL" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_SYMBOL" version="1.0" agencyID="StatCan" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:PrimaryMeasure>
+                  <Ref id="OBS_VALUE"/>
+                </str:PrimaryMeasure>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="STATUS_CAN" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=StatCan:Data_Structure_13100373(1.0).STATUS_CAN" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="STATUS_CAN" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_STATUS_CAN" version="1.0" agencyID="StatCan" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:PrimaryMeasure>
+                  <Ref id="OBS_VALUE"/>
+                </str:PrimaryMeasure>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="TERMINATED" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=StatCan:Data_Structure_13100373(1.0).TERMINATED" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="TERMINATED" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_TERMINATED" version="1.0" agencyID="StatCan" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:PrimaryMeasure>
+                  <Ref id="OBS_VALUE"/>
+                </str:PrimaryMeasure>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="SECURITY_LEVEL" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=StatCan:Data_Structure_13100373(1.0).SECURITY_LEVEL" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="SECURITY_LEVEL" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_SECURITY_LEVEL" version="1.0" agencyID="StatCan" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:PrimaryMeasure>
+                  <Ref id="OBS_VALUE"/>
+                </str:PrimaryMeasure>
+              </str:AttributeRelationship>
+            </str:Attribute>
+          </str:AttributeList>
+          <str:MeasureList id="MeasureDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.MeasureDescriptor=StatCan:Data_Structure_13100373(1.0).MeasureDescriptor">
+            <str:PrimaryMeasure id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.PrimaryMeasure=StatCan:Data_Structure_13100373(1.0).OBS_VALUE">
+              <str:ConceptIdentity>
+                <Ref id="OBS_VALUE" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="StatCan" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+            </str:PrimaryMeasure>
+          </str:MeasureList>
+        </str:DataStructureComponents>
+      </str:DataStructure>
+    </str:DataStructures>
+  </mes:Structures>
+</mes:Structure>

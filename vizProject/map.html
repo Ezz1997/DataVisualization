@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<title>Obesity map</title>
+		<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+		<style type="text/css">
+			#map{
+
+				background: rgb(239,243,255);
+
+
+			}
+
+			#buttons{
+				width: 80%;
+				margin-left: 10%;
+				margin-right: 10%;
+        margin-top: 2px;
+			}
+
+			.mapButton{
+				background: teal;
+				padding: 10px 5px;
+				margin: 1% 12%;
+				width: 20%;
+
+			}
+			.mapButton:hover{
+				background: purple;
+
+			}
+
+		</style>
+    <link rel="stylesheet"  href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Changa+One|Open+Sans:300italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet"  href="css/main.css">
+    <link rel="stylesheet"  href="css/responsive.css">
+    <meta name="viewport" content="width= device-width, intial-scale=1.0">
+
+  </head>
+  <body>
+    <header style="margin-bottom: 2%;">
+
+      <a href = "index.html" id="logo">
+        <h1>Obesity Levels in Canada</h1>
+        <h2> Data Visualization</h2>
+      </a>
+    <nav>
+       <ul>
+         <li><a href="index.html">Home</a></li>
+		 <li><a href="tables.html">Table</a></li>
+         <li><a href="graph.html"  >Graph</a></li>
+         <li><a href="map.html" class="selected">Map</a></li>
+		 <li><a href="conclusion.html">conclusion</a></li>
+      </ul>
+    </nav>
+    </header>
+    <div id="buttons">
+		<button class="mapButton" id="button" onClick="updateMap()">Obesity Levels</button>
+		<button class="mapButton" id="button2" onClick="updateMap2()">Fruit and Vegetable Consumption</button>
+	</div>
+<div id="OutDiv">
+	<div id="map" style="width: 80%; margin-left:10%;"> </div>
+</div>
+		<script type="text/javascript">
+
+			//Width and height
+			  var w = 800;
+		    var h = 600;
+
+		//var w = document.getElementById("map").clientWidth;
+		//var h = document.getElementById("map").clientHeight;
+			//Define map projection
+      var projection = d3.geoAzimuthalEquidistant()
+							.rotate([100,-45])
+							.center([5,20])
+							.translate([w/2+w/5, h/2])
+							.scale(600);
+
+			//Define path generator
+			var path = d3.geoPath()
+							 .projection(projection);
+
+               var color = d3.scaleLinear()
+                        	.range(["rgb(253,204,138)","rgb(227,74,51)","rgb(179,0,0)"]);
+
+				     	var color2 = d3.scaleLinear()
+												  	 .range(["rgb(186,228,179)","rgb(49,163,84)","rgb(0,109,44)"]);
+                         //Colors derived from ColorBrewer, by Cynthia Brewer, and included in
+                         //https://github.com/d3/d3-scale-chromatic
+
+			//Define quantize scale to sort data values into buckets of color
+		/*	var color = d3.scaleQuantize()
+								.range(["rgb(255,247,236)","rgb(254,232,200)","rgb(253,212,158)","rgb(253,187,1324)","rgb(252,141,89)","rgb(239,101,72)","rgb(215,48,31)","rgb(179,0,0)","rgb(127,0,0)"]);
+								//Colors derived from ColorBrewer, by Cynthia Brewer, and included in
+								//https://github.com/d3/d3-scale-chromatic  */
+			var dataset;
+			//Create SVG element
+			var svg2 = d3.select("#map")
+						.append("svg")
+						.attr("width", w)
+						.attr("height", h);
+
+			//Load in agriculture data
+			d3.csv("canadaLevels.csv", function(data) {
+				dataset = data;
+				//Set input domain for color scale
+				color.domain([
+					d3.min(data, function(d) { return d.value; }),
+					d3.max(data, function(d) { return d.value; })
+				]);
+
+				color2.domain([
+					d3.min(data, function(d) { return d.fruitConsumption; }),
+					d3.max(data, function(d) { return d.fruitConsumption; })
+				]);
+
+				//Load in GeoJSON data
+				d3.json("canada.json", function(err, json) {
+          if(err) console.log("error fetching data");
+// data holds the file content
+
+
+					//Merge the ag. data and GeoJSON
+					//Loop through once for each ag. data value
+					for (var i = 0; i < data.length; i++) {
+
+						//Grab state name
+						var dataProvince = data[i].province;
+
+						//Grab data value, and convert from string to float
+						var dataValue = parseFloat(data[i].value);
+            var length  = json.features.length;
+
+						//Find the corresponding state inside the GeoJSON
+						for (var j = 0; j < length; j++) {
+
+							var jsonProvince = json.features[j].properties.NAME;
+
+							if (dataProvince == jsonProvince) {
+
+								//Copy the data value into the JSON
+								json.features[j].properties.value = dataValue;
+
+								//Stop looking through the JSON
+								break;
+
+							}
+						}
+					}
+
+					//Bind data and create one path per GeoJSON feature
+					svg2.selectAll("path")
+					   .data(json.features)
+					   .enter()
+					   .append("path")
+					   .attr("d", path)
+					   .style("fill", function(d) {
+					   		//Get data value
+					   		return color(d.properties.value);
+					   })
+						 .append("title").text( (d) => d.properties.NAME+": "+d.properties.value+"%" );
+
+             svg2.append("rect")
+             .attr("id", "rect1")
+             .attr("x", w-80)
+             .attr("y", h-84)
+     					.attr("fill", "rgb(179,0,0)" )
+     					.attr("height", 18)
+     					.attr("width", 15);
+
+              svg2.append("text")
+              .attr("id", "text1")
+                .text("Highest")
+                .attr("x",  w-60 )
+                .attr("y",  h-70 );
+
+                svg2.append("rect")
+                .attr("id", "rect2")
+                .attr("x", w-80)
+                .attr("y", h-64)
+        					.attr("fill", "rgb(253,204,138)")
+        					.attr("height", 18)
+        					.attr("width", 15);
+
+                 svg2.append("text")
+                 .attr("id", "text2")
+                   .text("Lowest")
+                   .attr("x",  w-62 )
+                   .attr("y",  h-45 );
+
+			});
+		});
+
+
+
+			var updateMap = function(){
+				data=dataset;
+				//Load in GeoJSON data
+				d3.json("canada.json", function(err, json) {
+          if(err) console.log("error fetching data");
+// data holds the file content
+
+
+					//Merge the ag. data and GeoJSON
+					//Loop through once for each ag. data value
+					for (var i = 0; i < data.length; i++) {
+
+						//Grab state name
+						var dataProvince = data[i].province;
+
+						//Grab data value, and convert from string to float
+						var dataValue = parseFloat(data[i].value);
+            var length  = json.features.length;
+
+						//Find the corresponding state inside the GeoJSON
+						for (var j = 0; j < length; j++) {
+
+							var jsonProvince = json.features[j].properties.NAME;
+
+							if (dataProvince == jsonProvince) {
+
+								//Copy the data value into the JSON
+								json.features[j].properties.value = dataValue;
+
+								//Stop looking through the JSON
+								break;
+
+							}
+						}
+					}
+
+					//Bind data and create one path per GeoJSON feature
+					svg2.selectAll("path")
+					   .data(json.features)
+					   .transition()
+						 .duration(1500)
+						 .ease(d3.easeLinear)
+						 .delay(200)
+					   .attr("d", path)
+					   .style("fill", function(d) {
+					   		//Get data value
+					   		return color(d.properties.value);
+
+				})
+				.select("title").text( (d) => d.properties.NAME+": "+d.properties.value+"%" );
+
+        svg2.select("#rect1")
+        .attr("x", w-80)
+        .attr("y", h-84)
+         .attr("fill", "rgb(179,0,0)" )
+         .attr("height", 18)
+         .attr("width", 15);
+
+         svg2.select("#text1")
+           .text("Highest")
+           .attr("x",  w-60 )
+           .attr("y",  h-70 );
+
+           svg2.select("#rect2")
+           .attr("x", w-80)
+           .attr("y", h-64)
+             .attr("fill", "rgb(253,204,138)")
+             .attr("height", 18)
+             .attr("width", 15);
+
+            svg2.select("#text2")
+              .text("Lowest")
+              .attr("x",  w-62 )
+              .attr("y",  h-45 );
+
+			});
+
+			};
+			var updateMap2 = function(){
+				data=dataset;
+				//Load in GeoJSON data
+				d3.json("canada.json", function(err, json) {
+          if(err) console.log("error fetching data");
+// data holds the file content
+
+
+					//Merge the ag. data and GeoJSON
+					//Loop through once for each ag. data value
+					for (var i = 0; i < data.length; i++) {
+
+						//Grab state name
+						var dataProvince = data[i].province;
+
+						//Grab data value, and convert from string to float
+						var dataValue = parseFloat(data[i].fruitConsumption);
+            var length  = json.features.length;
+
+						//Find the corresponding state inside the GeoJSON
+						for (var j = 0; j < length; j++) {
+
+							var jsonProvince = json.features[j].properties.NAME;
+
+							if (dataProvince == jsonProvince) {
+
+								//Copy the data value into the JSON
+								json.features[j].properties.value = dataValue;
+
+								//Stop looking through the JSON
+								break;
+
+							}
+						}
+					}
+
+					//Bind data and create one path per GeoJSON feature
+					svg2.selectAll("path")
+					   .data(json.features)
+					   .transition()
+						 .duration(1500)
+						 .ease(d3.easeLinear)
+						 .delay(200)
+					   .attr("d", path)
+					   .style("fill", function(d) {
+					   		//Get data value
+					   		return color2(d.properties.value);
+
+
+
+				})
+				.select("title").text( (d) => d.properties.NAME+": "+d.properties.value+"%" );
+
+        svg2.select("#rect1")
+        .attr("x", w-80)
+        .attr("y", h-84)
+         .attr("fill", "rgb(0,109,44)" )
+         .attr("height", 18)
+         .attr("width", 15);
+
+         svg2.select("#text1")
+           .text("Highest")
+           .attr("x",  w-60 )
+           .attr("y",  h-70 );
+
+           svg2.select("#rect2")
+           .attr("x", w-80)
+           .attr("y", h-64)
+             .attr("fill", "rgb(186,228,179)")
+             .attr("height", 18)
+             .attr("width", 15);
+
+            svg2.select("#text2")
+              .text("Lowest")
+              .attr("x",  w-62 )
+              .attr("y",  h-45 );
+
+
+
+			});
+
+
+			};
+
+		</script>
+  </body>
+</html>
